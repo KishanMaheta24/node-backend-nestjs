@@ -10,10 +10,10 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'database-2.cwec6uzk9zfd.us-east-1.rds.amazonaws.com',
+      host: '',
       port: 5432,
       username: 'postgres_user',
-      password: 'Simform#123',
+      password: '',
       database: 'postgres',
       ssl: {
         rejectUnauthorized: false,
