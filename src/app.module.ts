@@ -10,12 +10,16 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'database-2.cwec6uzk9zfd.us-east-1.rds.amazonaws.com',
       port: 5432,
-      username: 'postgres',
-      password: 'root',
-      database: 'nestjs_tutorial',
+      username: 'postgres_user',
+      password: 'Simform#123',
+      database: 'postgres',
+      ssl: {
+        rejectUnauthorized: false,
+      },
       entities: [User, Profile, Post],
+      
       synchronize: true,
     }),
     UsersModule,
